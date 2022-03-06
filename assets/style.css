@@ -1,0 +1,48 @@
+/* Font */
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    /* Background image from https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Ffree-vector%2Ffireworks-white-background&psig=AOvVaw3Phy3KUXLEVVIyAGxNdofK&ust=1646594800758000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLCoy5nar_YCFQAAAAAdAAAAABAD */
+}
+
+/* Main content */
+
+/* Footer */
+
+/* Answer button styling */
+.ansBtn,
+.ansBtn:hover,
+.ansBtn:active,
+.ansBtn:focus,
+.ansBtn:active:focus {
+    box-shadow: black;
+    outline: whitesmoke;
+    background-color: #28a745;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 1024px) {
+    body {
+        background-image: url(../assets/images/FireworksBg.jpeg);
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+    body {
+	    background-image: url(../assets/images/FireworksBg.jpeg);
+    }
+}
