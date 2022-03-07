@@ -1,7 +1,12 @@
 /* Font */
 
 * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: medium;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: goldenrod;
 }
 html, body {
     height: 100%;
@@ -11,6 +16,11 @@ body {
     /* Background image from https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Ffree-vector%2Ffireworks-white-background&psig=AOvVaw3Phy3KUXLEVVIyAGxNdofK&ust=1646594800758000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLCoy5nar_YCFQAAAAAdAAAAABAD */
 }
 
+h1 {
+    font-size: 5.4rem;
+    color: black;
+    margin-bottom: 5rem;
+}
 /* Main content */
 
 /* Footer */
