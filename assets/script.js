@@ -60,7 +60,7 @@ let questionEl = document.querySelector("#questions");
 
 let questionCount = 0;
 
-const yesornoEl = document.querySelector("yesorno");
+const yesornoEl = document.querySelector("#yesorno");
 
 const finalEl = document.querySelector("#final");
 
@@ -92,7 +92,7 @@ const goBackBtn = document.querySelector("#goback");
 const clearScrBtn = document.querySelector("#clearscores");
 // view-scores
 const viewScrBtn = document.querySelector("#view-scores");
-}
+
 const questions = [ // array of objects
     { 
         // question 0
@@ -165,9 +165,9 @@ function checkAnswer(event) {
     event.preventDefault();
 
     // show section for yaynay and append message
-    yaynayEl.style.display = "block";
+    yesornoEl.style.display = "block";
     let p = document.createElement("p");
-    yaynayEl.appendChild(p);
+    yesornoEl.appendChild(p);
 
     // time out after 1 second
     setTimeout(function () {
