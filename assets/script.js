@@ -125,6 +125,9 @@ const questions = [ // array of objects
         correctAnswer: "4"
     }
 ];
+
+// Add Functions
+
 // Timer
 function setTime() {
     let timeInterval = setInterval(function () {
@@ -164,7 +167,7 @@ function setQuestion(id) {
 function checkAnswer(event) {
     event.preventDefault();
 
-    // show section for yaynay and append message
+    // show section for yesorno and append message
     yesornoEl.style.display = "block";
     let p = document.createElement("p");
     yesornoEl.appendChild(p);
@@ -174,12 +177,12 @@ function checkAnswer(event) {
         p.style.display = 'none';
     }, 1000);
 
-    // answer checker
+    // Check the answer
     if (questions[questionCount].correctAnswer === event.target.value) {
         p.textContent = "Correct!";
     } else if (questions[questionCount].correctAnswer !== event.target.value) {
         secondsLeft = secondsLeft - 10;
-        p.textContent = "Wrong!";
+        p.textContent = "Incorrect!";
     }
 
     // increment so the questions index is increased
