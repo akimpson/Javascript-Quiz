@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     font-size: medium;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: goldenrod;
 }
 html, body {
@@ -14,10 +14,23 @@ html, body {
 
 body {
     /* Background image from https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Ffree-vector%2Ffireworks-white-background&psig=AOvVaw3Phy3KUXLEVVIyAGxNdofK&ust=1646594800758000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLCoy5nar_YCFQAAAAAdAAAAABAD */
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 40px;
+    border: 5px;
+    background-position: center center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
-    font-size: 5.4rem;
+    font-size: 2.4rem;
     color: black;
     margin-bottom: 5rem;
 }
