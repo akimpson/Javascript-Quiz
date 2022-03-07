@@ -54,9 +54,9 @@ let scoreEl = document.querySelector("#score");
 const introEl = document.querySelector("#intro");
 
 //Questions
-const questionEl = document.querySelector("#questions");
+const questionsEl = document.querySelector("#questions");
 
-let questionEl = document.querySelector("#questions");
+let questionEl = document.querySelector("#question");
 
 let questionCount = 0;
 
