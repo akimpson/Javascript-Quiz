@@ -35,9 +35,28 @@ h1 {
     margin-bottom: 5rem;
 }
 /* Main content */
-
+main {
+    /* css so footer is at bottom of viewport */
+    flex: 1 0 auto;
+}
 /* Footer */
+footer {
+    /* css so footer is at bottom of viewport */
+    flex-shrink: 0;
+    font-size: .5rem;
+}
+/* hide sections until they are shown via the click events */
+#questions,
+#final,
+#highscores,
+#yaynay {
+    display: none;  
+  } 
 
+/* Remove bullet points from answers list */
+ul.nobullets {
+list-style-type: none;
+}
 /* Answer button styling */
 .ansBtn,
 .ansBtn:hover,
@@ -46,7 +65,7 @@ h1 {
 .ansBtn:active:focus {
     box-shadow: black;
     outline: whitesmoke;
-    background-color: #28a745;
+    background-color: #c4b042;
 }
 
 /* Mobile */
