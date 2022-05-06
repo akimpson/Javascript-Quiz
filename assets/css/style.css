@@ -1,90 +1,29 @@
-/* Font */
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-size: medium;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: goldenrod;
-}
-html, body {
-    height: 100%;
-}
-
-body {
-    /* Background image from https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Ffree-vector%2Ffireworks-white-background&psig=AOvVaw3Phy3KUXLEVVIyAGxNdofK&ust=1646594800758000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLCoy5nar_YCFQAAAAAdAAAAABAD */
-    margin: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    padding: 40px;
-    border: 5px;
-    background-position: center center;
-    background-repeat: no-repeat; 
-    background-attachment: fixed;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-}
-
-h1 {
-    font-size: 2.4rem;
-    color: black;
-    margin-bottom: 5rem;
-}
-/* Main content */
-main {
-    /* css so footer is at bottom of viewport */
-    flex: 1 0 auto;
-}
-/* Footer */
-footer {
-    /* css so footer is at bottom of viewport */
-    flex-shrink: 0;
-    font-size: .5rem;
-}
-/* hide sections until they are shown via the click events */
-#questions,
-#final,
-#highscores,
-#yesorno {
-    display: none;  
-  } 
-
-/* Remove bullet points from answers list */
-ul.nobullets {
-list-style-type: none;
-}
-/* Answer button styling */
-.ansBtn,
-.ansBtn:hover,
-.ansBtn:active,
-.ansBtn:focus,
-.ansBtn:active:focus {
-    box-shadow: black;
-    outline: whitesmoke;
-    background-color: #c4b042;
+.quiz-box {
+  width: 500px;
+  height: 500px;
+  background-color: black;
+  margin: 200px auto auto auto;
+  border-radius: 10px;
+  box-shadow: -10px 10px 10px 10px rgba(0, 0, 0, 0.25);
 }
 
 /* Mobile */
 @media (max-width: 480px) {
-    body {
-        background-color: lightblue;
-    }
+  body {
+    background-color: lightblue;
+  }
 }
 
 /* Tablet */
 @media (min-width: 481px) and (max-width: 1024px) {
-    body {
-        background-image: url(../assets/images/FireworksBg.jpeg);
-    }
+  body {
+    background-image: url(../assets/images/FireworksBg.jpeg);
+  }
 }
 
 /* Desktop */
 @media (min-width: 1025px) {
-    body {
-	    background-image: url(../assets/images/FireworksBg.jpeg);
-    }
+  body {
+    background-image: url(../assets/images/FireworksBg.jpeg);
+  }
 }
