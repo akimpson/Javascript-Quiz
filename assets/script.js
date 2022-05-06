@@ -104,7 +104,7 @@ const questions = [ // array of objects
         // question 1
         question: "The condition in an if / else statement is enclosed within ____.",
         answers: ["1. quotes", "2. curly brackets", "3. parenthesis", "4. square brackets"],
-        correctAnswer: "3"
+        correctAnswer: "2"
     },
     {
         // question 2
@@ -185,7 +185,7 @@ function checkAnswer(event) {
         p.textContent = "Incorrect!";
     }
 
-    // increment so the questions index is increased
+    // advance questions in increments
     if (questionCount < questions.length) {
         questionCount++;
     }
