@@ -114,3 +114,41 @@ var timerCount = function () {
     clearInterval(timeInterval);
   }
 };
+
+// Create variable/function to check correct answer on question 1
+var checkQuestion1 = function (event) {
+  targetButton = event.target;
+
+  // if correct
+  if (targetButton.matches("#C")) {
+    console.log("correct");
+    buttonCEl.style.backgroundColor = "green";
+    score++;
+    console.log(score);
+
+    // if incorrect
+  } else if (targetButton.matches("#A")) {
+    buttonCEl.style.backgroundColor = "green";
+    buttonAEl.style.backgroundColor = "red";
+    buttonBEl.style.backgroundColor = "red";
+    buttonDEl.style.backgroundColor = "red";
+    console.log("not c");
+    timer -= 5;
+    console.log(timer);
+  } else if (targetButton.matches("#B")) {
+    buttonCEl.style.backgroundColor = "green";
+    buttonAEl.style.backgroundColor = "red";
+    buttonBEl.style.backgroundColor = "red";
+    buttonDEl.style.backgroundColor = "red";
+    console.log("not c");
+    timer -= 5;
+  } else if (targetButton.matches("#D")) {
+    buttonCEl.style.backgroundColor = "green";
+    buttonAEl.style.backgroundColor = "red";
+    buttonBEl.style.backgroundColor = "red";
+    buttonDEl.style.backgroundColor = "red";
+    console.log("not c");
+    timer -= 5;
+    console.log(timer);
+  }
+};
