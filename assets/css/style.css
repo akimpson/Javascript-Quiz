@@ -20,6 +20,60 @@
   text-align: center;
 }
 
+.game-start-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.game-start-text h1 {
+  padding: 5px;
+  font-size: 40px;
+  text-align: center;
+}
+.game-start-text h2 {
+  text-align: center;
+  font-size: 24px;
+}
+.quiz-buttons {
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin-top: 50px;
+}
+.quiz-start {
+  padding: 5px;
+  border-radius: 10px;
+}
+.view-highscore {
+  padding: 5px;
+  border-radius: 10px;
+}
+.questionHeader {
+  float: left;
+  vertical-align: top;
+}
+.questionFormat {
+  text-align: center;
+  margin: 5px;
+  width: 100%;
+  display: inline-block;
+}
+.options {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: red;
+  color: antiquewhite;
+  border-radius: 10px;
+  width: 100%;
+  display: inline;
+}
+.options.hover {
+  background-color: orange;
+}
+
 /* Mobile */
 @media (max-width: 480px) {
   body {
