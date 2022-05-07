@@ -166,3 +166,7 @@ var setQuestion2 = function () {
   buttonBEl.style.backgroundColor = "";
   buttonDEl.style.backgroundColor = "";
 };
+
+// Add event listener to the start quiz button
+startButtonEl.addEventListener("click", startQuiz);
+quizContainerEl.addEventListener("click", checkQuestion1);
