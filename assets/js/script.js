@@ -152,3 +152,17 @@ var checkQuestion1 = function (event) {
     console.log(timer);
   }
 };
+
+// Set the questions & style for question2
+var setQuestion2 = function () {
+  questionHeaderEl.textContent = questionNumber[1];
+  questionEl.textContent = question[1];
+  buttonAEl.textContent = aAnswer[1];
+  buttonBEl.textContent = bAnswer[1];
+  buttonCEl.textContent = cAnswer[1];
+  buttonDEl.textContent = dAnswer[1];
+  buttonCEl.style.backgroundColor = "";
+  buttonAEl.style.backgroundColor = "";
+  buttonBEl.style.backgroundColor = "";
+  buttonDEl.style.backgroundColor = "";
+};
