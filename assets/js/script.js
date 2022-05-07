@@ -82,3 +82,35 @@ var dAnswer = [
   "d. Before the <head> tag",
   "d. To set a timer",
 ];
+
+// Add a function to start the quiz & start the timer
+var startQuiz = function () {
+  console.log("quiz started");
+  startGameTextEl.remove();
+  quizButtonEl.remove();
+  quizContainerEl.style.display = "block";
+  questionHeaderEl.textContent = questionNumber[0];
+  questionEl.textContent = question[0];
+  buttonAEl.textContent = aAnswer[0];
+  buttonBEl.textContent = bAnswer[0];
+  buttonCEl.textContent = cAnswer[0];
+  buttonDEl.textContent = dAnswer[0];
+  //start timer
+  startTimer();
+};
+
+// Create variable/function to set the timer interval
+var startTimer = function () {
+  timeInterval = setInterval(timerCount, 1000);
+};
+
+// Create variable/function that will add the timer to page
+var timerCount = function () {
+  // display the timer on the page
+  timerBoxEl.textContent = timer;
+
+  timer--;
+  if (timer < 0) {
+    clearInterval(timeInterval);
+  }
+};
