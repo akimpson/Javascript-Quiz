@@ -36,42 +36,40 @@ const rightAnswers = [
   "stringify()",
 ];
 var numHighS = 5;
-var High_Scores='highscores'
-var highScorestring=localStorage.getItem(High_Scores);
-var highscores=JSON.parse(highScorestring) ?? [];
+var High_Scores = "highscores";
+var highScorestring = localStorage.getItem(High_Scores);
+var highscores = JSON.parse(highScorestring) ?? [];
 var startBtn = document.querySelector("#start");
 function runQuiz() {
-  
-  // Create a disable button 
+  // Create a disable button
   startBtn.innerHTML = "What's your high score?";
   startBtn.disabled = true;
-  
+
   // Set an interval for the game score & clock
-  var tt=60;
-  
+  var tt = 60;
+
   // Create a timer function
-  function timer(){
-      if(tt>0){
-    tt--
-    console.log(tt);
-    document.querySelector('p').innerHTML = tt + " Seconds Remaining"
-      }
-      else{
-        window.alert("Game Over you ran out of time")
-        stoptime();
-        gameOver();
-      }
+  function timer() {
+    if (tt > 0) {
+      tt--;
+      console.log(tt);
+      document.querySelector("p").innerHTML = tt + " Seconds Remaining";
+    } else {
+      window.alert("Game Over you ran out of time");
+      stoptime();
+      gameOver();
+    }
   }
-  
+
   // Set Interval
-  var time = setInterval(()=>{
-      timer()
+  var time = setInterval(() => {
+    timer();
   }, 1000);
-  
+
   // Create a stop function
-function stoptime(){
+  function stoptime() {
     clearInterval(time);
-}
+  }
   // Create a function that resets the questions and answers
   var i = 0;
   function reset() {
@@ -80,8 +78,8 @@ function stoptime(){
     let ListH = document.getElementById("questiontop");
     header.textContent = "Question #" + number;
     ListH.textContent = Questions[i];
-    
-   // Create a for loop to add individual questions & answers
+
+    // Create a for loop to add individual questions & answers
     for (n = 0; n < 4; n++) {
       let li = document.createElement("li");
       let button = document.createElement("button");
@@ -92,10 +90,10 @@ function stoptime(){
       document.getElementById("questiontop").appendChild(li);
     }
     test();
-    if(i===rightAnswers.length){
-        window.alert("Game Over")
-        stoptime();
-        gameOver();
+    if (i === rightAnswers.length) {
+      window.alert("Game Over");
+      stoptime();
+      gameOver();
     }
   }
   function test() {
@@ -111,29 +109,30 @@ function stoptime(){
           window.alert("You have selected the wrong answer!");
           console.log(i);
           reset(i++);
-          tt=tt-5
+          tt = tt - 5;
         }
       });
     }
   }
-  
+
   // Create a function to end the game
-  function gameOver(){
+  function gameOver() {
     let header = document.getElementById("questionHead");
-      header.textContent="The Game is now over!";
-      document.querySelector('p').innerHTML ="You score for this run was " + tt + " points";
-      var initials= window.prompt("Please enter initials")
-      var newScore = {tt,initials};
-      highscores.push(newScore)
-      highscores.sort((a,b)=>b.score-a.score);
-      highscores.splice(numHighS)
-      localStorage.setItem(High_Scores,JSON.stringify(highscores))
-    
-   highScore.push(tt +" Points by "+ initials)
-      console.log(highscores);
+    header.textContent = "The Game is now over!";
+    document.querySelector("p").innerHTML =
+      "You score for this run was " + tt + " points";
+    var initials = window.prompt("Please enter initials");
+    var newScore = { tt, initials };
+    highscores.push(newScore);
+    highscores.sort((a, b) => b.score - a.score);
+    highscores.splice(numHighS);
+    localStorage.setItem(High_Scores, JSON.stringify(highscores));
+
+    highScore.push(tt + " Points by " + initials);
+    console.log(highscores);
   }
-    reset();
-}      
+  reset();
+}
 
 // Add an event listener to generate a button to start the quiz
 startBtn.addEventListener("click", runQuiz);
