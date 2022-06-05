@@ -129,7 +129,7 @@ function stoptime(){
       highscores.splice(numHighS)
       localStorage.setItem(High_Scores,JSON.stringify(highscores))
     
-   // highScore.push(tt +" Points by "+ initials)
+   highScore.push(tt +" Points by "+ initials)
       console.log(highscores);
   }
     reset();
