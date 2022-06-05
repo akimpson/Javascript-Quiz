@@ -79,3 +79,19 @@ var dAnswer = [
   "d. Before the <head> tag",
   "d. To set a timer",
 ];
+
+// Create a function to start the quiz displaying the first question and starting the timer)
+var startQuiz = function () {
+  console.log("quiz started");
+  startGameTextEl.remove();
+  quizButtonEl.remove();
+  quizContainerEl.style.display = "block";
+  questionHeaderEl.textContent = questionNumber[0];
+  questionEl.textContent = question[0];
+  buttonAEl.textContent = aAnswer[0];
+  buttonBEl.textContent = bAnswer[0];
+  buttonCEl.textContent = cAnswer[0];
+  buttonDEl.textContent = dAnswer[0];
+  //start timer
+  startTimer();
+};
