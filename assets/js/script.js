@@ -41,14 +41,12 @@ var highScorestring = localStorage.getItem(High_Scores);
 var highscores = JSON.parse(highScorestring) ?? [];
 var startBtn = document.querySelector("#start");
 function runQuiz() {
-  // Create a disable button
-  startBtn.innerHTML = "What's your high score?";
+  //Disable Button and change the wording
+  startBtn.innerHTML = "How high of a score can you get??!!!";
   startBtn.disabled = true;
-
-  // Set an interval for the game score & clock
+  //Setinterval for game score/clock
   var tt = 60;
-
-  // Create a timer function
+  //timer function
   function timer() {
     if (tt > 0) {
       tt--;
@@ -60,17 +58,15 @@ function runQuiz() {
       gameOver();
     }
   }
-
-  // Set Interval
+  //interval set
   var time = setInterval(() => {
     timer();
   }, 1000);
-
-  // Create a stop function
+  //Stop function
   function stoptime() {
     clearInterval(time);
   }
-  // Create a function that resets the questions and answers
+  //function that resets the questions and answers
   var i = 0;
   function reset() {
     let number = i + 1;
@@ -78,8 +74,7 @@ function runQuiz() {
     let ListH = document.getElementById("questiontop");
     header.textContent = "Question #" + number;
     ListH.textContent = Questions[i];
-
-    // Create a for loop to add individual questions & answers
+    //for loop to add individual question answers
     for (n = 0; n < 4; n++) {
       let li = document.createElement("li");
       let button = document.createElement("button");
@@ -114,8 +109,7 @@ function runQuiz() {
       });
     }
   }
-
-  // Create a function to end the game
+  //function for the game over
   function gameOver() {
     let header = document.getElementById("questionHead");
     header.textContent = "The Game is now over!";
@@ -127,12 +121,11 @@ function runQuiz() {
     highscores.sort((a, b) => b.score - a.score);
     highscores.splice(numHighS);
     localStorage.setItem(High_Scores, JSON.stringify(highscores));
-
-    highScore.push(tt + " Points by " + initials);
+    //highScore.push(tt +" Points by "+ initials)
     console.log(highscores);
   }
   reset();
 }
 
-// Add an event listener to generate a button to start the quiz
+// Add event listener to generate button
 startBtn.addEventListener("click", runQuiz);

@@ -1,8 +1,11 @@
 # Javascript Quiz
 
+## Languages
+
+HTML, CSS, and Javascript were used to create this application.
+
 ## Description
 
-HTML, CSS, and Javascript were used to create this application. <br>
 Initially, upon a click of the Start Quiz button, the user is propmted to answer a series of questions relating to Javascript.
 
 - Quiz must be completed in 60 seconds or less.
