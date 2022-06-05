@@ -41,32 +41,32 @@ var highScorestring = localStorage.getItem(High_Scores);
 var highscores = JSON.parse(highScorestring) ?? [];
 var startBtn = document.querySelector("#start");
 function runQuiz() {
-  // Add disable button
-  startBtn.innerHTML = "What is your high score?";
+  // Add a disable button
+  startBtn.innerHTML = "What's Your High Score?";
   startBtn.disabled = true;
 
   // Set interval for the game score & clock
   var tt = 60;
 
-  // Add timer function
+  // Set timer function
   function timer() {
     if (tt > 0) {
       tt--;
       console.log(tt);
       document.querySelector("p").innerHTML = tt + " Seconds Remaining";
     } else {
-      window.alert("Game Over you ran out of time");
+      window.alert("Times's Up. Game Over!");
       stoptime();
       gameOver();
     }
   }
 
-  // Set interval
+  // Set interval timer
   var time = setInterval(() => {
     timer();
   }, 1000);
 
-  // Create stop function
+  // Add stop function
   function stoptime() {
     clearInterval(time);
   }
@@ -80,7 +80,7 @@ function runQuiz() {
     header.textContent = "Question #" + number;
     ListH.textContent = Questions[i];
 
-    // Create for loop to add individual questions & answers
+    // Create a for loop to add individual question & answers
     for (n = 0; n < 4; n++) {
       let li = document.createElement("li");
       let button = document.createElement("button");
@@ -103,7 +103,7 @@ function runQuiz() {
       ansbtns[a].addEventListener("click", function () {
         let finalans = this.textContent;
         if (finalans === rightAnswers[i]) {
-          window.alert("Congrats you got the question right!");
+          window.alert("Well done, you are correct!");
           console.log(i);
           reset(i++);
         } else {
@@ -116,24 +116,23 @@ function runQuiz() {
     }
   }
 
-  // Create a function to show the game is over
+  // Create a function for the game to be over
   function gameOver() {
     let header = document.getElementById("questionHead");
     header.textContent = "The game is now over!";
     document.querySelector("p").innerHTML =
-      "You score for this run was " + tt + " points";
+      "Your score for this run was " + tt + " points";
     var initials = window.prompt("Please enter initials");
     var newScore = { tt, initials };
     highscores.push(newScore);
     highscores.sort((a, b) => b.score - a.score);
     highscores.splice(numHighS);
     localStorage.setItem(High_Scores, JSON.stringify(highscores));
-
     highScore.push(tt + " Points by " + initials);
     console.log(highscores);
   }
   reset();
 }
 
-// Add an event listener to generate button
+// Add event listener to generate button
 startBtn.addEventListener("click", runQuiz);
