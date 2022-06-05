@@ -14,7 +14,7 @@ Initially, upon a click of the Start Quiz button, the user is propmted to answer
 
 ## 🔗 Links
 
-This site was built using [Github Pages](https://akimpson.github.io/Javascript-Coding-Quiz/). <br>
+This site was built using [Github Pages](https://akimpson.github.io/Javascript-Quiz/). <br>
 More of my work can be found at (https://github.com/akimpson)
 
 ## Screenshots

@@ -41,12 +41,14 @@ var highScorestring = localStorage.getItem(High_Scores);
 var highscores = JSON.parse(highScorestring) ?? [];
 var startBtn = document.querySelector("#start");
 function runQuiz() {
-  //Disable Button and change the wording
-  startBtn.innerHTML = "How high of a score can you get??!!!";
+  // Add disable button
+  startBtn.innerHTML = "What is your high score?";
   startBtn.disabled = true;
-  //Setinterval for game score/clock
+
+  // Set interval for the game score & clock
   var tt = 60;
-  //timer function
+
+  // Add timer function
   function timer() {
     if (tt > 0) {
       tt--;
@@ -58,15 +60,18 @@ function runQuiz() {
       gameOver();
     }
   }
-  //interval set
+
+  // Set interval
   var time = setInterval(() => {
     timer();
   }, 1000);
-  //Stop function
+
+  // Create stop function
   function stoptime() {
     clearInterval(time);
   }
-  //function that resets the questions and answers
+
+  // Create a function that resets the questions and answers
   var i = 0;
   function reset() {
     let number = i + 1;
@@ -74,7 +79,8 @@ function runQuiz() {
     let ListH = document.getElementById("questiontop");
     header.textContent = "Question #" + number;
     ListH.textContent = Questions[i];
-    //for loop to add individual question answers
+
+    // Create for loop to add individual questions & answers
     for (n = 0; n < 4; n++) {
       let li = document.createElement("li");
       let button = document.createElement("button");
@@ -109,10 +115,11 @@ function runQuiz() {
       });
     }
   }
-  //function for the game over
+
+  // Create a function to show the game is over
   function gameOver() {
     let header = document.getElementById("questionHead");
-    header.textContent = "The Game is now over!";
+    header.textContent = "The game is now over!";
     document.querySelector("p").innerHTML =
       "You score for this run was " + tt + " points";
     var initials = window.prompt("Please enter initials");
@@ -121,11 +128,12 @@ function runQuiz() {
     highscores.sort((a, b) => b.score - a.score);
     highscores.splice(numHighS);
     localStorage.setItem(High_Scores, JSON.stringify(highscores));
-    //highScore.push(tt +" Points by "+ initials)
+
+    highScore.push(tt + " Points by " + initials);
     console.log(highscores);
   }
   reset();
 }
 
-// Add event listener to generate button
+// Add an event listener to generate button
 startBtn.addEventListener("click", runQuiz);
