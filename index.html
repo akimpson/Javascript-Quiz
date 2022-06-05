@@ -2,32 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coding Quiz</title>
-    <link rel="stylesheet" href="assets/css/style.css"></link>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Javascript Quiz</title>
+    <link rel="stylesheet" href="assets/style.css"/>
   </head>
- <body>
-     <div class="quiz-box">
-
-        <div class="quiz-container">
-            <span class="timerBox"></span>
-            <h1 class="questionheader"></h1>
-            <h2 class="questionFormat"></h2>
-            <button class="options" id="A">A</button>
-            <button class="options" id="B">B</button>
-            <button class="options" id="C">C</button>
-            <button class="options" id="D">D</button>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Javascript Quiz</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2 id="questionHead">Test Your Knowledg</h2>
+          <p></p>
         </div>
-        <div class="game-start-text">
-         <h1>Coding Quiz</h1>
-         <h2>Welcome! Let's see what you've learned! Answer these coding related questions in 60 seconds or less to beat the HIGH SCORE. </br> </h2>
+        <div class="card-body" id="questionlist">
+            <ol id="questiontop"> Quiz Rules
+                <li id="question">The quiz must be completed in 60 seconds or less.</li>
+                <li id="question">Each incorrect answer results in a penalty of 5 seconds renoved from the timer.</li>
+                <li id="question">Once completed you are prompted to add your initials to be added to the high scores list. </li>
+            </ol>
         </div>
-        <div class="quiz-buttons">
-            <button class="quiz-start">Start</button>
-            <button class="view-highscore">View High Score</button>
+        <div class="card-footer">
+          <button id="start" class="btn">Start Quiz!</button>
         </div>
-     </div>
-     <script src="(./assets/js/script.js"></script>
- </body>
+      </div>
+    </div>
+    <script src="assets/script.js"></script>
+  </body>
 </html>
