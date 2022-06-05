@@ -14,3 +14,13 @@ questionHeaderEl = document.querySelector(".questionHeader");
 questionEl = document.querySelector(".questionFormat");
 
 timerBoxEl = document.querySelector(".timerBox");
+
+// Answer buttons
+buttonAEl = document.getElementById("A");
+buttonBEl = document.getElementById("B");
+buttonCEl = document.getElementById("C");
+buttonDEl = document.getElementById("D");
+
+// Timer and score
+var timer = "60";
+var score = "0";
