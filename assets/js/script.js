@@ -1,9 +1,16 @@
-//DOM Elements
+// DOM Elements
 
 startButtonEl = document.querySelector(".start-quiz");
 quizAreaEl = document.querySelector(".quiz-box");
 startGameTextEl = document.querySelector(".start-game-text");
 quizButtonEl = document.querySelector(".quiz-buttons");
-//sets quiz header and questions display to none
+
+// Set quiz header and questions display to none
 quizContainerEl = document.querySelector(".quiz-container");
 quizContainerEl.style.display = "none";
+
+// Define the question header and the question
+questionHeaderEl = document.querySelector(".questionHeader");
+questionEl = document.querySelector(".questionFormat");
+
+timerBoxEl = document.querySelector(".timerBox");
