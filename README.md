@@ -1,21 +1,19 @@
-# WebAPIChallenge
+# Javascript Quiz
 
-# User Story
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
+## Description
 
-# Acceptance Criteria
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and score
+HTML, CSS, and Javascript were used to create this application. <br>
+Initially, upon a click of the Start Quiz button, the user is propmted to answer a series of questions relating to Javascript.
 
-## Technologies Use
+- Quiz must be completed in 60 seconds or less.
+- Each incorrrect answer results in a penalty of 5 seconds that are removed from the timer.
+- Once completed you are prompted to add your initials to be added to the high scores list.
+
+## 🔗 Links
+
+This site was built using [Github Pages](https://akimpson.github.io/Javascript-Coding-Quiz/). <br>
+More of my work can be found at (https://github.com/akimpson)
+
+## Screenshots
+
+![Javascript-Quiz](./assets/images/Javascript%20Quiz%20Screenshot.png)
